@@ -1,0 +1,8 @@
+<md-nav-list>
+    <md-list-item *ngFor="let course of courses">
+        <img md-list-avatar [src]="course.poster" alt="course.title">
+        <h4 (click)="onSelect(course)" md-line>{{course.title}}
+            <md-icon color="accent">{{course.mediaType == 1? "videocam": "image"}}</md-icon>
+        </h4>
+    </md-list-item>
+</md-nav-list>

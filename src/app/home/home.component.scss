@@ -1,0 +1,29 @@
+@import "../media-queries";
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  $break-large: 1200px;
+
+  md-card {
+    margin: 5px;
+
+    @include mobile-only {
+      // css code for small screens go here
+      width: 100%;
+    }
+
+
+    @include desktop-and-up {
+      // css code for small screens go here
+      width: 20%;
+      min-width: 20%;
+    }
+  }
+
+  .mat-list .mat-list-item .mat-list-text > *, .mat-nav-list .mat-list-item .mat-list-text > * {
+    font-size: 25px;
+  }
+}

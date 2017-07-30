@@ -1,0 +1,25 @@
+<md-sidenav-container fullscreen>
+    <md-sidenav #start>
+        <md-nav-list *ngFor="let category of categories">
+            <h3 md-subheader>{{category.name}}</h3>
+            <md-list-item *ngFor="let item of category.items">
+                <md-icon md-list-icon>{{item.icon}}</md-icon>
+                <a md-line class="item" (click)="onSelect(item.name)"> {{item.name}} </a>
+            </md-list-item>
+        </md-nav-list>
+    </md-sidenav>
+
+    <md-toolbar color="primary">
+        <button md-icon-button (click)="start.open()">
+            <md-icon class="md-24">menu</md-icon>
+        </button>
+        <div class="demo-toolbar">
+            <h1>Manager School</h1>
+        </div>
+        <md-icon color="accent" (click)="home()">home</md-icon>
+    </md-toolbar>
+
+    <div #root="$implicit" dir="ltr" class="demo-content">
+        <router-outlet></router-outlet>
+    </div>
+</md-sidenav-container>

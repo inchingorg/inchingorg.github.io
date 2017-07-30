@@ -1,0 +1,13 @@
+<div class="cards">
+  <md-card *ngFor="let category of categories">
+    <md-card-title>{{category.name}}</md-card-title>
+    <md-card-content>
+      <md-nav-list>
+        <md-list-item *ngFor="let item of category.items">
+          <md-icon md-list-icon>{{item.icon}}</md-icon>
+          <a md-line class="item" (click)="onSelect(item.name)">{{item.name}}</a>
+        </md-list-item>
+      </md-nav-list>
+    </md-card-content>
+  </md-card>
+</div>

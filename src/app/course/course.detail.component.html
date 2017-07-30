@@ -1,0 +1,17 @@
+<md-card>
+    <md-card-title>{{course.title}}</md-card-title>
+
+    <md-card-content>
+        <p>{{course.description}}</p>
+    </md-card-content>
+
+    <video *ngIf="course.mediaType == 1" md-card-image controls [poster]="course.poster">
+        <source
+                [src]="course.url"
+                type="video/mp4">
+        Your browser doesn't support HTML5 video tag.
+    </video>
+
+    <img *ngIf="course.mediaType == 2" md-card-image [src]="course.url">
+
+</md-card>
