@@ -3,7 +3,7 @@
  */
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { decorateModuleRef } from './app/environment';
-import { bootloader } from '@angularclass/hmr';
+
 /**
  * App Module
  * our top level module that holds all of our components
@@ -20,12 +20,21 @@ export function main(): Promise<any> {
     .catch((err) => console.error(err));
 }
 
-import {enableProdMode} from '@angular/core';
-
 /**
  * Needed for hmr
  * in prod this is replace for document ready
  */
+switch (document.readyState) {
+  case 'loading':
+    document.addEventListener('DOMContentLoaded', _domReadyHandler, false);
+    break;
+  case 'interactive':
+  case 'complete':
+  default:
+    main();
+}
 
-enableProdMode();
-bootloader(main);
+function _domReadyHandler() {
+ document.removeEventListener('DOMContentLoaded', _domReadyHandler, false);
+ main();
+}

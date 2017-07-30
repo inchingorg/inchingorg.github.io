@@ -1,12 +1,10 @@
 <p align="center">
-  <a href="http://courses.angularclass.com/courses/angular-2-fundamentals?utm_source=github-angular2-webpack-starter&utm_medium=open-source&utm_campaign=webpackstarter" target="_blank">
-    <img width="438" alt="Angular 2 Fundamentals" src="https://cloud.githubusercontent.com/assets/1016365/17200649/085798c6-543c-11e6-8ad0-2484f0641624.png">
+  <a href="https://onespeed.io/" target="_blank">
+    <img  alt="OneSpeed" src="https://user-images.githubusercontent.com/1016365/28749799-58e89da4-7488-11e7-9470-e0022f668687.png">
   </a>
 </p>
 
 ___
-
-
 
 [![taylor swift](https://img.shields.io/badge/secured%20by-taylor%20swift-brightgreen.svg)](https://twitter.com/SwiftOnSecurity)
 [![volkswagen status](https://auchenberg.github.io/volkswagen/volkswargen_ci.svg?v=1)](https://github.com/auchenberg/volkswagen)
@@ -16,12 +14,12 @@ ___
 [![Stack Share](http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](http://stackshare.io/angularclass/angular-2-webpack-starter)
 
 <p align="center">
-  <a href="https://angularclass.com" target="_blank">
-    <img src="https://cloud.githubusercontent.com/assets/1016365/9863762/a84fed4a-5af7-11e5-9dde-d5da01e797e7.png" alt="Webpack and Angular 2" width="500" height="320"/>
+  <a href="https://onespeed.io" target="_blank">
+    <img src="https://cloud.githubusercontent.com/assets/1016365/26219144/aa986cfa-3bdb-11e7-9f04-7296dc9ae945.png" alt="Angular Starter with Webpack by OneSpeed" />
   </a>
 </p>
 
-# Angular2 Webpack Starter [![Join Slack](https://img.shields.io/badge/slack-join-brightgreen.svg)](https://angularclass.com/slack-join) [![Join the chat at https://gitter.im/angularclass/angular2-webpack-starter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/angularclass/angular2-webpack-starter?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+# Angular4 Webpack Starter [![Join Slack](https://img.shields.io/badge/slack-join-brightgreen.svg)](https://angularclass.com/slack-join) [![Join the chat at https://gitter.im/angularclass/angular2-webpack-starter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/angularclass/angular2-webpack-starter?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 
 > An Angular starter kit featuring [Angular 4](https://angular.io), [Ahead of Time Compile](https://angular.io/docs/ts/latest/cookbook/aot-compiler.html), [Router](https://angular.io/docs/ts/latest/guide/router.html), [Forms](https://angular.io/docs/ts/latest/guide/forms.html),
@@ -32,9 +30,9 @@ ___
 > If you're looking for Angular 1.x please use [NG6-starter](https://github.com/angularclass/NG6-starter)
 > If you're looking to learn about Webpack and ES6 Build Tools check out [ES6-build-tools](https://github.com/AngularClass/ES6-build-tools)
 > If you're looking to learn TypeScript see [TypeStrong/learn-typescript](https://github.com/TypeStrong/learn-typescript)
-> If you're looking for something easier to get started with then see the angular2-seed that I also maintain [angular/angular2-seed](https://github.com/AngularClass/angular2-seed)
+> If you're looking for something easier to get started with then see the angular-seed that I also maintain [AngularClass/angular-seed](https://github.com/AngularClass/angular-seed)
 
-This seed repo serves as an Angular starter for anyone looking to get up and running with Angular and TypeScript fast. Using a [Webpack 2](http://webpack.github.io/) for building our files and assisting with boilerplate. We're also using Protractor for our end-to-end story and Karma for our unit tests.
+This seed repo serves as an Angular starter for anyone looking to get up and running with Angular and TypeScript fast. Using a [Webpack 3](https://webpack.js.org) for building our files and assisting with boilerplate. We're also using Protractor for our end-to-end story and Karma for our unit tests.
 * Best practices in file and application organization for Angular.
 * Ready to go build system using Webpack for working with TypeScript.
 * Angular examples that are ready to go when experimenting with Angular.
@@ -46,7 +44,7 @@ This seed repo serves as an Angular starter for anyone looking to get up and run
 * Coverage with Istanbul and Karma
 * End-to-end Angular code using Protractor.
 * Type manager with @types
-* Hot Module Replacement with Webpack and [@angularclass/hmr](https://github.com/angularclass/angular2-hmr) and [@angularclass/hmr-loader](https://github.com/angularclass/angular2-hmr-loader)
+* Hot Module Replacement with Webpack and [@angularclass/hmr](https://github.com/angularclass/angular-hmr) and [@angularclass/hmr-loader](https://github.com/angularclass/angular-hmr-loader)
 * Angular 4 support via changing package.json and any future Angular versions
 
 ### Quick start
@@ -56,10 +54,13 @@ This seed repo serves as an Angular starter for anyone looking to get up and run
 ```bash
 # clone our repo
 # --depth 1 removes all but one .git commit history
-git clone --depth 1 https://github.com/angularclass/angular2-webpack-starter.git
+git clone --depth 1 https://github.com/AngularClass/angular-starter.git
 
 # change directory to our repo
-cd angular2-webpack-starter
+cd angular-starter
+
+# WINDOWS only. In terminal as administrator
+npm install -g node-pre-gyp
 
 # install the repo with npm
 npm install
@@ -89,13 +90,14 @@ go to [http://0.0.0.0:3000](http://0.0.0.0:3000) or [http://localhost:3000](http
 * [@Types](#types)
 * [Frequently asked questions](#frequently-asked-questions)
 * [Support, Questions, or Feedback](#support-questions-or-feedback)
+* [Deployment](#deployment)
 * [License](#license)
 
 
 ## File Structure
 We use the component approach in our starter. This is the new standard for developing Angular apps and a great way to ensure maintainable code by encapsulation of our behavior logic. A component is basically a self contained app usually in a single file or a folder with each concern as a file: style, template, specs, e2e, and component class. Here's how it looks:
 ```
-angular2-webpack-starter/
+angular-starter/
  ├──config/                        * our configuration
  |   ├──helpers.js                 * helper functions for our configuration files
  |   ├──spec-bundle.js             * ignore this magic that sets up our Angular testing environment
@@ -128,7 +130,7 @@ angular2-webpack-starter/
  ├──typedoc.json                   * typescript documentation generator
  ├──tsconfig.json                  * typescript config used outside webpack
  ├──tsconfig.webpack.json          * config that webpack uses for typescript
- ├──package.json                   * what npm uses to manage it's dependencies
+ ├──package.json                   * what npm uses to manage its dependencies
  └──webpack.config.js              * webpack main configuration file
 
 ```
@@ -221,28 +223,6 @@ npm run e2e:live
 ### build Docker
 ```bash
 npm run build:docker
-```
-
-### Build Desktop
-
-```sh
-# development
-npm run build:dev
-
-# production
-npm run build:prod
-```
-
-Preview electron (without angular build)
-
-```sh
-npm run electron
-```
-
-Create electron package (build included)
-
-```sh
-npm run package
 ```
 
 # Configuration
@@ -351,19 +331,19 @@ import * as _ from 'lodash';
 * How do I start the app when I get `EACCES` and `EADDRINUSE` errors?
   * The `EADDRINUSE` error means the port `3000` is currently being used and `EACCES` is lack of permission for webpack to build files to `./dist/`
 * How to use `sass` for css?
- *  * `loaders: ['raw-loader','sass-loader']` and `@Component({ styleUrls: ['./filename.scss'] })` see Wiki page [How to include SCSS in components](https://github.com/AngularClass/angular2-webpack-starter/wiki/How-to-include-SCSS-in-components), or issue [#136](https://github.com/AngularClass/angular2-webpack-starter/issues/136) for more information.
+ *  * `loaders: ['raw-loader','sass-loader']` and `@Component({ styleUrls: ['./filename.scss'] })` see Wiki page [How to include SCSS in components](https://github.com/AngularClass/angular-starter/wiki/How-to-include-SCSS-in-components), or issue [#136](https://github.com/AngularClass/angular-starter/issues/136) for more information.
 * How do I test a Service?  
-  * See issue [#130](https://github.com/AngularClass/angular2-webpack-starter/issues/130#issuecomment-158872648)
+  * See issue [#130](https://github.com/AngularClass/angular-starter/issues/130#issuecomment-158872648)
 * How do I add `vscode-chrome-debug` support?
-  * The VS Code chrome debug extension support can be done via `launch.json` see issue [#144](https://github.com/AngularClass/angular2-webpack-starter/issues/144#issuecomment-164063790)
+  * The VS Code chrome debug extension support can be done via `launch.json` see issue [#144](https://github.com/AngularClass/angular-starter/issues/144#issuecomment-164063790)
 * How do I make the repo work in a virtual machine?
-  * You need to use `0.0.0.0` so revert these changes [#205](https://github.com/AngularClass/angular2-webpack-starter/pull/205/files)
+  * You need to use `0.0.0.0` so revert these changes [#205](https://github.com/AngularClass/angular-starter/pull/205/files)
 * What are the naming conventions for Angular?
-  * please see issue [#185](https://github.com/AngularClass/angular2-webpack-starter/issues/185) and PR [196](https://github.com/AngularClass/angular2-webpack-starter/pull/196)
+  * please see issue [#185](https://github.com/AngularClass/angular-starter/issues/185) and PR [196](https://github.com/AngularClass/angular-starter/pull/196)
 * How do I include bootstrap or jQuery?
-  * please see issue [#215](https://github.com/AngularClass/angular2-webpack-starter/issues/215) and [#214](https://github.com/AngularClass/angular2-webpack-starter/issues/214#event-511768416)
+  * please see issue [#215](https://github.com/AngularClass/angular-starter/issues/215) and [#214](https://github.com/AngularClass/angular-starter/issues/214#event-511768416)
 * How do I async load a component?
-  * see wiki [How-do-I-async-load-a-component-with-AsyncRoute](https://github.com/AngularClass/angular2-webpack-starter/wiki/How-do-I-async-load-a-component-with-AsyncRoute)
+  * see wiki [How-do-I-async-load-a-component-with-AsyncRoute](https://github.com/AngularClass/angular-starter/wiki/How-do-I-async-load-a-component-with-AsyncRoute)
 * Error: Cannot find module 'tapable'
   * Remove `node_modules/` and run `npm cache clean` then `npm install`
 * How do I turn on Hot Module Replacement
@@ -375,11 +355,11 @@ import * as _ from 'lodash';
 * If you're in China
   * check out https://github.com/cnpm/cnpm
 * node-pre-gyp ERR in npm install (Windows)
-  * install Python x86 version between 2.5 and 3.0 on windows see issue [#626](https://github.com/AngularClass/angular2-webpack-starter/issues/626)
+  * install Python x86 version between 2.5 and 3.0 on windows see issue [#626](https://github.com/AngularClass/angular-starter/issues/626)
 * `Error:Error: Parse tsconfig error [{"messageText":"Unknown compiler option 'lib'.","category":1,"code":5023},{"messageText":"Unknown compiler option 'strictNullChecks'.","category":1,"code":5023},{"messageText":"Unknown compiler option 'baseUrl'.","category":1,"code":5023},{"messageText":"Unknown compiler option 'paths'.","category":1,"code":5023},{"messageText":"Unknown compiler option 'types'.","category":1,"code":5023}]`
   * remove `node_modules/typescript` and run `npm install typescript@beta`. This repo now uses ts 2.0 
 * "There are multiple modules with names that only differ in casing"
-  * change `c:\[path to angular2-webpack-starter]` to `C:\[path to angular2-webpack-starter]` see [926#issuecomment-245223547](https://github.com/AngularClass/angular2-webpack-starter/issues/926#issuecomment-245223547)
+  * change `c:\[path to angular-starter]` to `C:\[path to angular-starter]` see [926#issuecomment-245223547](https://github.com/AngularClass/angular-starter/issues/926#issuecomment-245223547)
 
 # Support, Questions, or Feedback
 > Contact us anytime for anything about this repo or Angular
@@ -390,29 +370,112 @@ import * as _ from 'lodash';
 
 # Deployment
 
+## Docker
+
+To run project you only need host machine with **operating system** with installed **git** (to clone this repo) 
+and [docker](https://www.docker.com/) and thats all - any other software is not needed
+(other software like node.js etc. will be automatically downloaded and installed inside docker container during build step based on dockerfile).
+
+### Install docker
+
+#### MacOS:
+
+`brew cask install docker`
+
+And run docker by Mac bottom menu> launchpad > docker (on first run docker will ask you about password)
+
+#### Ubuntu:
+
+```
+sudo apt-get update
+sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+sudo apt-add-repository 'deb https://apt.dockerproject.org/repo ubuntu-xenial main'
+sudo apt-get update
+apt-cache policy docker-engine
+sudo apt-get install -y docker-engine
+sudo systemctl status docker  # test:  shoud be ‘active’
+```
+And add your user to docker group (to avoid `sudo` before using `docker` command in future):
+```
+sudo usermod -aG docker $(whoami)
+```
+and logout and login again.
+
+### Build image
+
+Because *node.js* is big memory consumer you need 1-2GB RAM or virtual memory to build docker image 
+(it was successfully tested on machine with 512MB RAM + 2GB virtual memory - building process take 7min)
+
+Go to main project folder. To build big (~280MB) image which has cached data and is able to **FAST** rebuild  
+(this is good for testing or staging environment) type: 
+
+`docker build -t angular-starter .`
+
+To build **SMALL** (~20MB) image without cache (so each rebuild will take the same amount of time as first build)
+(this is good for production environment) type:
+
+`docker build --squash="true" -t angular-starter .` 
+
+The **angular-starter** name used in above commands is only example image name. 
+To remove intermediate images created by docker on build process, type:
+ 
+`docker rmi -f $(docker images -f "dangling=true" -q)`
+
+### Run image
+
+To run created docker image on [localhost:8080](localhost:8080) type (parameter `-p 8080:80` is host:container port mapping)
+
+`docker run --name angular-starter -p 8080:80 angular-starter &`
+
+And that's all, you can open browser and go to [localhost:8080](localhost:8080).
+
+### Run image on sub-domain
+
+If you want to run image as virtual-host on sub-domain you must setup [proxy](https://github.com/jwilder/nginx-proxy)
+. You should install proxy and set sub-domain in this way:
+ 
+ ```
+ docker pull jwilder/nginx-proxy:alpine
+ docker run -d -p 80:80 --name nginx-proxy -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy:alpine
+ ```
+ 
+ And in your `/etc/hosts` file (linux) add line: `127.0.0.1 angular-starter.your-domain.com` or in yor hosting add
+ folowing DNS record (wildchar `*` is handy because when you add new sub-domain in future, you don't need to touch/add any DNS record)
+  
+ ```
+ Type: CNAME 
+ Hostname: *.your-domain.com
+ Direct to: your-domain.com
+ TTL(sec): 43200 
+ ```
+
+And now you are ready to run image on subdomain by:
+
+```
+docker run -e VIRTUAL_HOST=angular-starter.your-domain.com --name angular-starter angular-starter &
+```
+
+### Login into docker container
+
+`docker exec -t -i angular-starter /bin/bash`
+
 ## Netlify
 
 You can quickly create a free site to get started using this
 starter kit in production on [Netlify](https://www.netlify.com/):
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/AngularClass/angular2-webpack-starter)
-
-<p align="center">
-  <a href="http://courses.angularclass.com/courses/angular-2-fundamentals" target="_blank">
-    <img width="438" alt="Angular Fundamentals" src="https://cloud.githubusercontent.com/assets/1016365/17200649/085798c6-543c-11e6-8ad0-2484f0641624.png">
-  </a>
-</p>
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/AngularClass/angular-starter)
 
 ___
 
-enjoy — **AngularClass**
+enjoy — **AngularClass** a **OneSpeed** company
 
 <br><br>
 
-[![AngularClass](https://cloud.githubusercontent.com/assets/1016365/9863770/cb0620fc-5af7-11e5-89df-d4b0b2cdfc43.png  "Angular Class")](https://angularclass.com)
-## [AngularClass](https://angularclass.com)
-> Learn AngularJS, Angular, and Modern Web Development from the best.
-> Looking for corporate Angular training, want to host us, or Angular consulting? patrick@angularclass.com
+[![OneSpeed](https://user-images.githubusercontent.com/1016365/28739734-462f5210-73b2-11e7-92f7-2aabe05cfefa.png  "OneSpeed")](https://onespeed.io)
+## [OneSpeed](https://onespeed.io)
+> Our experience is vast with OneSpeed successfully creating and delivering solutions for companies like Bloomberg, American Airlines, and IBM.
+> We will tailor our solutions to fit your needs. Web App Development Services, Mobile App Services, Corporate Training contact us at Patrick@OneSpeed.io
 
 ___
 
