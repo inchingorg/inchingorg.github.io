@@ -1,3 +1,10 @@
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2846834382442028",
+    enable_page_level_ads: true
+  });
+</script>
 <p align="center">
   <a href="https://onespeed.io/" target="_blank">
     <img  alt="OneSpeed" src="https://user-images.githubusercontent.com/1016365/28749799-58e89da4-7488-11e7-9470-e0022f668687.png">
